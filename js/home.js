@@ -1,20 +1,25 @@
 const canvas = document.getElementById("canvas1");
 const canvasCtx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-this.textBaseY = 0;
 
-function resizeCanvas() {
+this.isMobile = false;
+this.isPortrate = false;
+function resizeCanvas(firstResize) {
     canvas.width = window.innerWidth ;
     canvas.height = window.innerHeight ;
+
+    this.isMobile = (canvas.height<600 || canvas.width<800)   
+    this.isPortrate =  (canvas.height > canvas.width);
+
+
     this.textBaseY = 0;
+    if (firstResize) return;
     initParticles();
     initLinks();
 }
-
+resizeCanvas(true)
 this.textBaseY = 0;
 
-window.addEventListener('resize', resizeCanvas);
+window.addEventListener('resize', e => resizeCanvas(false));
 
 const mouse = {
     x: null,
@@ -99,6 +104,34 @@ initParticles();
 const planetData = [];
 function initLinks(){
     planetData.length = 0;
+    if (isMobile){
+        if (isPortrate){
+            planetData.push(   
+                { text: "Home", radius: 60, x: canvas.width/7, y: 30, url: "https://dhemken97.github.io/" },
+                { text: "About", radius: 60, x: canvas.width/7*2, y: 70, url: "https://dhemken97.github.io/About" },
+                { text: "Contact", radius: 60, x: canvas.width/7*3, y: 30, url: "https://dhemken97.github.io/Contact" },
+                { text: "Projects", radius: 60, x: canvas.width/7*4, y: 70, url: "https://dhemken97.github.io/Projects" },
+                { text: "GitHub", radius: 60, x: canvas.width/7*5, y: 30, url: "https://github.com/DHemken97" },
+                { text: "More", radius: 60, x: canvas.width/7*6, y: 70, url: "https://dhemken97.github.io/More" },
+                 
+                 
+                )
+        }
+        else{
+            planetData.push(   
+                { text: "Home", radius: 60, x: canvas.width/7, y: canvas.height/2 - 30, url: "https://dhemken97.github.io/" },
+                { text: "About", radius: 60, x: canvas.width/7*2, y: canvas.height/2 - 30, url: "https://dhemken97.github.io/About" },
+                { text: "Contact", radius: 60, x: canvas.width/7*2 - 40, y: canvas.height/2 + 20, url: "https://dhemken97.github.io/Contact" },
+                { text: "More", radius: 60, x: canvas.width/7*5 + 40, y: canvas.height/2 + 40, url: "https://dhemken97.github.io/More" },
+                { text: "GitHub", radius: 60, x: canvas.width/7*5, y: canvas.height/2, url: "https://github.com/DHemken97" },
+                { text: "Projects", radius: 60, x: canvas.width/7*6, y: canvas.height/2, url: "https://dhemken97.github.io/Projects" },
+                 
+                 
+                )
+        }
+    }
+    else
+    {
     planetData.push(    { text: "Home", radius: 60, x: canvas.width / 4, y: canvas.height / 2, url: "https://dhemken97.github.io/" },
         { text: "About", radius: 80, x: (canvas.width / 2)-(canvas.width/10), y: canvas.height/8, url: "https://dhemken97.github.io/about" },
         { text: "Contact", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height/8, url: "https://dhemken97.github.io/contact" },
@@ -107,6 +140,7 @@ function initLinks(){
         { text: "GitHub", radius: 80, x: (canvas.width / 2)-(canvas.width/10), y: canvas.height*0.9, url: "https://github.com/DHemken97" },
         { text: "More", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height*0.9, url: "https://dhemken97.github.io/more" },
         )
+    }
 }
 
 const astronautImg = new Image();
@@ -191,7 +225,15 @@ function animate() {
 
     if (this.textBaseY === 0) this.textBaseY = (canvas.height / 2) - 120;
     canvasCtx.fillStyle = "rgba(255, 255, 255, 0.9)";
+    if (!this.isMobile)
     canvasCtx.font = "75px Arial";
+    else
+    {
+        var maxFont = canvas.width / 10;
+        console.log(canvas.width , 10,maxFont)
+
+        canvasCtx.font = maxFont&"px Arial";
+    }    
     canvasCtx.textAlign = "center";
     canvasCtx.fillText("Dominic Hemken", canvas.width / 2, this.textBaseY);
     canvasCtx.fillText("Full Stack Developer", canvas.width / 2, this.textBaseY + 275);
