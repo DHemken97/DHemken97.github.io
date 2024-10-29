@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Portfolio - Dominic Hemken</title>
+  <style>
+    /* Make sure body and html don't add extra space */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden; /* Prevent scrolling */
+    }
+
+
+    /* Canvas to fit exactly the viewport */
+    #canvas1 {
+      position: absolute; /* Change to absolute */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid black;
+      box-sizing: border-box; /* Include border in width/height */
+    }
+  </style>
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+
+  <script src="./js/home.js"></script>
+</body>
+</html>
