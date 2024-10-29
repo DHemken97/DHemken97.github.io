@@ -107,24 +107,24 @@ function initLinks(){
     if (isMobile){
         if (isPortrate){
             planetData.push(   
-                { text: "Home", radius: 60, x: canvas.width/7, y: 30, url: "https://dhemken97.github.io/" },
-                { text: "About", radius: 60, x: canvas.width/7*2, y: 70, url: "https://dhemken97.github.io/About" },
-                { text: "Contact", radius: 60, x: canvas.width/7*3, y: 30, url: "https://dhemken97.github.io/Contact" },
-                { text: "Projects", radius: 60, x: canvas.width/7*4, y: 70, url: "https://dhemken97.github.io/Projects" },
+                { text: "Home", radius: 60, x: canvas.width/7, y: 30, url: "./" },
+                { text: "About", radius: 60, x: canvas.width/7*2, y: 70, url: "./About.html" },
+                { text: "Contact", radius: 60, x: canvas.width/7*3, y: 30, url: "./Contact.html" },
+                { text: "Projects", radius: 60, x: canvas.width/7*4, y: 70, url: "./Projects.html" },
                 { text: "GitHub", radius: 60, x: canvas.width/7*5, y: 30, url: "https://github.com/DHemken97" },
-                { text: "More", radius: 60, x: canvas.width/7*6, y: 70, url: "https://dhemken97.github.io/More" },
+                { text: "More", radius: 60, x: canvas.width/7*6, y: 70, url: "./More.html" },
                  
                  
                 )
         }
         else{
             planetData.push(   
-                { text: "Home", radius: 60, x: canvas.width/7, y: canvas.height/2 - 30, url: "https://dhemken97.github.io/" },
-                { text: "About", radius: 60, x: canvas.width/7*2, y: canvas.height/2 - 30, url: "https://dhemken97.github.io/About" },
-                { text: "Contact", radius: 60, x: canvas.width/7*2 - 40, y: canvas.height/2 + 20, url: "https://dhemken97.github.io/Contact" },
-                { text: "More", radius: 60, x: canvas.width/7*5 + 40, y: canvas.height/2 + 40, url: "https://dhemken97.github.io/More" },
+                { text: "Home", radius: 60, x: canvas.width/7, y: canvas.height/2 - 30, url: "./" },
+                { text: "About", radius: 60, x: canvas.width/7*2, y: canvas.height/2 - 30, url: "./About.html" },
+                { text: "Contact", radius: 60, x: canvas.width/7*2 - 40, y: canvas.height/2 + 20, url: "./Contact.html" },
+                { text: "More", radius: 60, x: canvas.width/7*5 + 40, y: canvas.height/2 + 40, url: "./More.html" },
                 { text: "GitHub", radius: 60, x: canvas.width/7*5, y: canvas.height/2, url: "https://github.com/DHemken97" },
-                { text: "Projects", radius: 60, x: canvas.width/7*6, y: canvas.height/2, url: "https://dhemken97.github.io/Projects" },
+                { text: "Projects", radius: 60, x: canvas.width/7*6, y: canvas.height/2, url: "./Projects.html" },
                  
                  
                 )
@@ -132,13 +132,13 @@ function initLinks(){
     }
     else
     {
-    planetData.push(    { text: "Home", radius: 60, x: canvas.width / 4, y: canvas.height / 2, url: "https://dhemken97.github.io/" },
-        { text: "About", radius: 80, x: (canvas.width / 2)-(canvas.width/10), y: canvas.height/8, url: "https://dhemken97.github.io/about" },
-        { text: "Contact", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height/8, url: "https://dhemken97.github.io/contact" },
-        { text: "Projects", radius: 70, x: (canvas.width * 3) / 4, y: canvas.height / 2, url: "https://dhemken97.github.io//projects" },
+    planetData.push(    { text: "Home", radius: 60, x: canvas.width / 4, y: canvas.height / 2, url: "./" },
+        { text: "About", radius: 80, x: (canvas.width / 2)-(canvas.width/10), y: canvas.height/8, url: "./about.html" },
+        { text: "Contact", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height/8, url: "./contact.html" },
+        { text: "Projects", radius: 70, x: (canvas.width * 3) / 4, y: canvas.height / 2, url: "./projects.html" },
         
         { text: "GitHub", radius: 80, x: (canvas.width / 2)-(canvas.width/10), y: canvas.height*0.9, url: "https://github.com/DHemken97" },
-        { text: "More", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height*0.9, url: "https://dhemken97.github.io/more" },
+        { text: "More", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height*0.9, url: "./more.html" },
         )
     }
 }

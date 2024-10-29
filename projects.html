@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects Timeline</title>
+    <link rel="stylesheet" href="./css/projects.css">
 </head>
 <body>
-    
+    <header>
+        <h1>My Projects</h1>
+        <p>A timeline of my work and experiences.</p>
+        <p>(Click items to view details)</p>
+    </header>
+    <main>
+        <div class="timeline" id="timeline-container"></div>
+        <div class="peeker" id="peeker-container">
+            <img class="peeker" src="./img/peek.png" id="peeker" />
+            <div class="eye" id="left-eye" style="top: 87px; left: 20px;">
+                <div class="pupil" id="left-pupil"></div>
+            </div>
+            <div class="eye" id="right-eye" style="top: 110px; left: 55px;">
+                <div class="pupil" id="right-pupil"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/projects.js"></script>
 </body>
 </html>
