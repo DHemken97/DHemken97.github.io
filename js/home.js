@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas1");
 const canvasCtx = canvas.getContext('2d');
-canvas.width = window.innerWidth - 100;
-canvas.height = window.innerHeight - 100;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 this.textBaseY = 0;
 
 function resizeCanvas() {
@@ -99,16 +99,15 @@ initParticles();
 const planetData = [];
 function initLinks(){
     planetData.length = 0;
-    planetData.push(    { text: "Home", radius: 60, x: canvas.width / 4, y: canvas.height / 2, url: "https://example.com/home" },
-        { text: "About", radius: 80, x: (canvas.width / 2)-(canvas.width/10), y: canvas.height/8, url: "https://example.com/about" },
-        { text: "Contact", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height/8, url: "https://example.com/about" },
-        { text: "Projects", radius: 70, x: (canvas.width * 3) / 4, y: canvas.height / 2, url: "https://example.com/projects" },
+    planetData.push(    { text: "Home", radius: 60, x: canvas.width / 4, y: canvas.height / 2, url: "https://dhemken97.github.io/" },
+        { text: "About", radius: 80, x: (canvas.width / 2)-(canvas.width/10), y: canvas.height/8, url: "https://dhemken97.github.io/about" },
+        { text: "Contact", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height/8, url: "https://dhemken97.github.io/contact" },
+        { text: "Projects", radius: 70, x: (canvas.width * 3) / 4, y: canvas.height / 2, url: "https://dhemken97.github.io//projects" },
         
-        { text: "GitHub", radius: 80, x: (canvas.width / 2)-(canvas.width/10), y: canvas.height*0.9, url: "https://example.com/about" },
-        { text: "Contact", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height*0.9, url: "https://example.com/about" },
+        { text: "GitHub", radius: 80, x: (canvas.width / 2)-(canvas.width/10), y: canvas.height*0.9, url: "https://github.com/DHemken97" },
+        { text: "More", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height*0.9, url: "https://dhemken97.github.io/more" },
         )
 }
-initLinks()
 
 const astronautImg = new Image();
 astronautImg.src = "./img/spaceman.png";
@@ -215,4 +214,11 @@ function animate() {
 
     requestAnimationFrame(animate);
 }
+
+window.addEventListener('load', (event) => {
+    // Code to execute after everything is loaded
+    initLinks();
+    
+    console.log("Page is fully loaded");
+  });
 animate();
