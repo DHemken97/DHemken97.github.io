@@ -10,11 +10,14 @@ header {
     margin-bottom: 40px;
 }
 
+
+/*Default*/
+
+
 .timeline {
     position: absolute;
     width: 80%;
     min-height: 500px;
-    padding: 15px;
     border: #007BFF solid 3px;
     top: 18%;
     left: 10%;
@@ -47,6 +50,69 @@ header {
     background-color: black; /* Black color for pupils */
     border-radius: 50%; /* Make it round */
 }
+
+#left-eye{
+    top: 48%; left: 12%;
+}
+#right-eye{
+    top: 59%; left: 29%;
+}
+/*Mobile*/
+
+@media (max-width: 900px) {
+
+
+.timeline {
+    position: absolute;
+    width: 80%;
+    min-height: 500px;
+    border: #007BFF solid 3px;
+    top: 36%;
+    left: 10%;
+    background-color: #555;
+    border-radius: 45px;
+    
+}
+.peeker{
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    top: 15%;
+    right: 25%;
+}
+
+
+.eye {
+    position: absolute;
+    width: 2vh; /* Set size for eyes */
+    height: 3vh; /* Set size for eyes */
+    background-color: white; /* White background for eyes */
+    border-radius: 50%; /* Make it round */
+    border: 2px solid black; /* Black border for eyes */
+}
+
+.pupil {
+    position: absolute;
+    width: 1vh; /* Set size for pupils */
+    height: 1vh; /* Set size for pupils */
+    background-color: blue; /* Black color for pupils */
+    border-radius: 50%; /* Make it round */
+}
+
+#left-eye{
+    top: 60%; left: 12%;
+}
+#right-eye{
+    top: 72%; left: 29%;
+}
+
+}
+
+
+    
+
+
+
 
 .timeline-item {
     background: #fff;

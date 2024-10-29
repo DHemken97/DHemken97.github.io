@@ -63,7 +63,8 @@ function addEventListeners() {
         const peeker = document.getElementById('peeker-container');
         const leftEye = document.getElementById('left-eye');
         const rightEye = document.getElementById('right-eye');
-        
+        const isLandscape = window.innerHeight < window.innerWidth;
+        const isMobile = (isLandscape ? window.innerHeight : window.innerWidth) < 900;
         // Get the bounding rectangle of the peeker container
         const rect = peeker.getBoundingClientRect();
     
@@ -72,7 +73,7 @@ function addEventListeners() {
         const mouseY = event.clientY - rect.top;
     
         // Eye movement parameters
-        const eyeDistance = 8; // Distance of pupils from the center of the eye
+        const eyeDistance = isMobile? isLandscape? 4:8:8; // Distance of pupils from the center of the eye
         const leftEyeX = leftEye.offsetLeft + leftEye.offsetWidth / 2 ;
         const leftEyeY = leftEye.offsetTop + leftEye.offsetHeight / 2;
         
