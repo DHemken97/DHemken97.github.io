@@ -72,7 +72,7 @@ function addEventListeners() {
         const mouseY = event.clientY - rect.top;
     
         // Eye movement parameters
-        const eyeDistance = 10; // Distance of pupils from the center of the eye
+        const eyeDistance = 8; // Distance of pupils from the center of the eye
         const leftEyeX = leftEye.offsetLeft + leftEye.offsetWidth / 2 ;
         const leftEyeY = leftEye.offsetTop + leftEye.offsetHeight / 2;
         
