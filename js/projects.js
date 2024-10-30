@@ -18,14 +18,19 @@ function generateTimeline(projects) {
         const timelineItem = document.createElement('div');
         timelineItem.className = 'timeline-item';
         timelineItem.setAttribute('data-project', `project${index + 1}`);
-        let optionals = ''
-        if (project.img) //Use Image Template
-        optionals+=`<img src="${project.img}" alt="Project Image"/>\r\n`
-        if (project.gitUrl) //Use Image Template
-        optionals+=`<button class="github-button" onclick="openGitHubRepo(${project.gitUrl})">View on GitHub</button>\r\n`
-        
 
-        
+        let optionals = '';
+        if (project.img) { // Use Image Template
+            optionals += '<div class="imageContainer">';
+            project.img.forEach(img => {
+                optionals += `<img src="${img}" alt="Project Image" class="project-image"/>\r\n`;
+            });
+            optionals += '</div>';
+        }
+        if (project.gitUrl) {
+            optionals += `<a href="${project.gitUrl}" class="github-button">View on GitHub</a>\r\n`;
+        }
+
         timelineItem.innerHTML = `
             <div class="timeline-content">
                 <h2>${project.title}</h2>
@@ -36,19 +41,44 @@ function generateTimeline(projects) {
                 ${optionals}
                 <p><strong>Technologies:</strong> ${project.technologies}</p>
             </div>
-        `; 
+        `;
         container.appendChild(timelineItem);
     });
+
+    // Add image click event for modal display
+    document.querySelectorAll('.project-image').forEach(image => {
+        image.addEventListener('click', function () {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-image');
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        });
+    });
+
+    // Modal close functionality
+    const modal = document.getElementById('image-modal');
+    const span = document.getElementsByClassName("close")[0];
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+    span.onclick();
 }
 
 function addEventListeners() {
-    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineItems = document.querySelectorAll('.timeline-content');
     timelineItems.forEach(item => {
         item.addEventListener('click', () => {
-            const details = item.querySelector('.details');
+            const details = item.parentNode.querySelector('.details');
             if (details.style.display === 'block') {
+                
                 details.style.display = 'none';
-            } else {
+                
+            } else { 
                 // Close any open details before opening a new one
                 document.querySelectorAll('.details').forEach(detail => {
                     detail.style.display = 'none';
@@ -56,6 +86,7 @@ function addEventListeners() {
                 details.style.display = 'block';
             }
         });
+
     });
 
 
@@ -112,10 +143,5 @@ fetchProjects().then(projects => {
     generateTimeline(projects);
     addEventListeners();
 });
-
-
-function openGitHubRepo(url) {
-    window.open(url, "_blank");
-}
 
 
