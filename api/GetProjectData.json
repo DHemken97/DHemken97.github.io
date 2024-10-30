@@ -20,6 +20,13 @@
         "description": "Developed a comprehensive software solution for order entry, shipping, production management, and billing processes. This WPF application utilizes WCF for service-oriented architecture, enabling efficient communication between modules. The integration of REST APIs allows seamless data exchange with external systems, while Telerik Reporting provides robust reporting features for invoices and order tracking.",
         "img": ["./img/Unity.png", "./img/Unity_Invoice.png"],
         "technologies": "C#, WPF, WCF, REST, Telerik Reporting, SQL Server, Entity Framework, MVVM"
+    },
+    {
+        "title": "JBHunt 360 Software",
+        "date": "2022",
+        "description": "Developed and maintained backend services for the JBHunt 360 platform, focusing on scalability and reliability to support high-volume logistics operations.",
+        "img": ["./img/jbh-carrier-360-app-render.png"],
+        "technologies": "Java, C#, SQL Server, Microservices, Google Cloud Platform, Microsoft Azure, Kubernetes"
     }
     
 
