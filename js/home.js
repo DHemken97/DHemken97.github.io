@@ -230,7 +230,6 @@ function animate() {
     else
     {
         var maxFont = canvas.width / 10;
-        console.log(canvas.width , 10,maxFont)
 
         canvasCtx.font = maxFont&"px Arial";
     }    
