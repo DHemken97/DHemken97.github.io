@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="./css/projects.css">
 </head>
 <body>
-    <header>
-        <h1>My Projects</h1>
-        <p>A timeline of my work and experiences.</p>
-        <p>(Click items to view details)</p>
-    </header>
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="./img/Tech_Tiles.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
     <main>
         <div class="pageContent"> 
-            <div class="timeline" id="timeline-container"></div>
+            <div class="timeline" id="timeline-container">
+                <div class="header">
+                    <h1>My Projects</h1>
+                    <h3>A timeline of my work and experiences.<h3>
+                    <h3>(Click items to view details)</h3>
+                    </div>
+            </div>
             <div class="peeker" id="peeker-container">
                 <img class="peeker" src="./img/peek.png" id="peeker" />
                 <div class="eye" id="left-eye">

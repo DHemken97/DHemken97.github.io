@@ -5,21 +5,28 @@ body {
     background-color: #007BFF;
 }
 
-header {
+.header {
     text-align: center;
-    margin-bottom: 40px;
+    width: 100%;
+
+}
+
+h1,h3{
+    color: white;
 }
 
 .timeline {
     position: absolute;
     width: 80%;
     min-height: 500px;
-    border: 3px solid #007BFF;
-    background-color: #555;
-    border-radius: 45px;
+    background-color: rgba(0,0,0,0.5) ;
     left: 10%;
-    top: 18%
+    top: 18.5%;
+    border: 5px solid;
+    border-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) 1;
+    border-radius: 8px;
 }
+
 
 .peeker {
     position: absolute;
@@ -85,11 +92,11 @@ header {
 }
 
 .timeline-item {
-    background: #fff;
+    background: rgba(113, 216, 168, 0.6);
     border: 2px solid #007BFF;
     border-radius: 10px;
-    margin: 20px;
-    padding: 15px;
+    margin: 2%;
+    padding: 2%;
     cursor: pointer;
     transition: transform 0.3s;
     position: relative;
@@ -107,8 +114,7 @@ header {
     margin-top: 10px;
     padding: 10px;
     border-top: 1px solid #007BFF;
-    background-color: #f9f9f9;
-    max-height: 65vh;
+    background-color: rgba(0,0,0,0);
 }
 
 img 
@@ -193,3 +199,13 @@ img
 .close:focus {
     color: #bbb;
 }
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures video covers entire background */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Puts the video behind other content */
+  }
