@@ -99,7 +99,9 @@ header {
     transform: scale(1.02);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+.timeline-content{
+    height: 100%;
+}
 .details {
     display: none;
     margin-top: 10px;
@@ -109,13 +111,18 @@ header {
     max-height: 65vh;
 }
 
-img {
+img 
+{
     width: 100%;
     height: 100%;
     max-width: 50vw;
     max-height: 50vh;
-    aspect-ratio: 1 / 1;
 }
+.project-image{
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
 
 .github-button {
     display: flex;

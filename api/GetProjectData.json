@@ -2,10 +2,25 @@
     {
         "title": "NBuilder Maintainer",
         "date": "2019 - Current",
-        "description": "",
-        "img": ["./img/NBuilder.png"],
+        "description": "NBuilder allows you to rapidly create test data, automatically assigning values to properties and public fields that are one of the built in .NET data types (e.g. ints and strings). NBuilder allows you to override for properties you are interested in using lambda expressions.",
+        "img": ["./img/NBuilder.png","./img/NBuilder2.png"],
         "technologies": "C#",
         "gitUrl":"https://github.com/nbuilder/nbuilder"
+    },
+    {
+        "title": "Multiple Shipping Carrier Integrations",
+        "date": "2017 - Current",
+        "description": "Integrated with multiple shipping carrier APIs including UPS, AFS, FedEx, USPS, and XPS for functionalities such as shipment processing, tracking, address validation, and rate shopping. While UPS, FedEx, and USPS utilize REST APIs with JSON, AFS remains SOAP-based. This integration streamlines shipping operations and enhances logistics efficiency.",
+        "img": ["./img/RateShopRequest.png", "./img/RateShopResult.png"],
+        "technologies": "C#, REST, JSON, SOAP, XML, Bearer Tokens"
+    },
+    {
+        "title": "Order Entry - Shipping - Production - Billing Software",
+        "date": "2017 - Current",
+        "description": "Developed a comprehensive software solution for order entry, shipping, production management, and billing processes. This WPF application utilizes WCF for service-oriented architecture, enabling efficient communication between modules. The integration of REST APIs allows seamless data exchange with external systems, while Telerik Reporting provides robust reporting features for invoices and order tracking.",
+        "img": ["./img/Unity.png", "./img/Unity_Invoice.png"],
+        "technologies": "C#, WPF, WCF, REST, Telerik Reporting, SQL Server, Entity Framework, MVVM"
     }
+    
 
 ]
