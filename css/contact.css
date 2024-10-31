@@ -1,0 +1,113 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contact Form Container */
+.contact-container {
+    text-align: center;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.contact-container h1 {
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+/* Contact Form Fields */
+.contact-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.contact-input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 8px #00ffff;
+}
+
+#submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #00b4d8;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submit-btn:hover {
+    background: #0096c7;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    padding: 5px 15px;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    color: #00ffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: #fff;
+    background: #00ffff;
+    box-shadow: 0 0 8px #00ffff;
+}
+
+/* Cursor Trail */
+.cursor-trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #00ffff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fade 1s linear;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
