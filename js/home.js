@@ -112,7 +112,7 @@ function initLinks(){
                 { text: "Contact", radius: 60, x: canvas.width/7*3, y: 30, url: "./contact.html" },
                 { text: "Projects", radius: 60, x: canvas.width/7*4, y: 70, url: "./projects.html" },
                 { text: "GitHub", radius: 60, x: canvas.width/7*5, y: 30, url: "https://github.com/DHemken97" },
-                { text: "More", radius: 60, x: canvas.width/7*6, y: 70, url: "./more.html" },
+                { text: "This Site", radius: 60, x: canvas.width/7*6, y: 70, url: "./portfolio.html" },
                  
                  
                 )
@@ -122,7 +122,7 @@ function initLinks(){
                 { text: "Home", radius: 60, x: canvas.width/7, y: canvas.height/2 - 30, url: "./" },
                 { text: "About", radius: 60, x: canvas.width/7*2, y: canvas.height/2 - 30, url: "./about.html" },
                 { text: "Contact", radius: 60, x: canvas.width/7*2 - 40, y: canvas.height/2 + 20, url: "./contact.html" },
-                { text: "More", radius: 60, x: canvas.width/7*5 + 40, y: canvas.height/2 + 40, url: "./more.html" },
+                { text: "This Site", radius: 60, x: canvas.width/7*5 + 40, y: canvas.height/2 + 40, url: "./portfolio.html" },
                 { text: "GitHub", radius: 60, x: canvas.width/7*5, y: canvas.height/2, url: "https://github.com/DHemken97" },
                 { text: "Projects", radius: 60, x: canvas.width/7*6, y: canvas.height/2, url: "./projects.html" },
                  
@@ -138,7 +138,7 @@ function initLinks(){
         { text: "Projects", radius: 70, x: (canvas.width * 3) / 4, y: canvas.height / 2, url: "./projects.html" },
         
         { text: "GitHub", radius: 80, x: (canvas.width / 2)-(canvas.width/10), y: canvas.height*0.9, url: "https://github.com/DHemken97" },
-        { text: "More", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height*0.9, url: "./more.html" },
+        { text: "This Site", radius: 80, x: (canvas.width / 2)+(canvas.width/10), y: canvas.height*0.9, url: "./portfolio.html" },
         )
     }
 }
