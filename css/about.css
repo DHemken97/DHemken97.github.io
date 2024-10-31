@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+}
+
+.header {
+    text-align: center;
+}
+
+h1, p {
+    color: white;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.bio {
+    flex: 1;
+    background: rgba(106, 129, 112, 0.6);
+    border: 2px solid #1c1d1d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+.personal-interests,
+.achievements,
+.life-philosophy{
+    flex: 1;
+    background: rgba(106, 129, 112, 0.6);
+    border: 2px solid #1c1d1d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 20px;
+    transition: transform 0.3s;
+}
+.skills {
+    flex: 1;
+    background: rgba(106, 129, 112, 0.6);
+    border: 2px solid #1c1d1d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 20px;
+    transition: transform 0.3s;
+}
+
+.bio:hover, .skills:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(0, 0, 0, 0.7);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image-gallery {
+    margin: 40px 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image {
+    flex: 1;
+    min-width: 200px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #333;
+    font-size: 20px;
+    aspect-ratio: 1,1;
+}
+
+.image:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.personal-interests, .achievements, .life-philosophy {
+    margin: 40px 0;
+}
+
+.contact {
+    margin: 40px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+}
+
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}

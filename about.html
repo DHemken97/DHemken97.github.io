@@ -3,9 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About Me</title>
+    <link rel="stylesheet" href="./css/about.css">
 </head>
 <body>
-    
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="./img/about.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <main>
+        <div class="pageContent">
+            <div class="header">
+                <h1>About Me</h1>
+                <p>Welcome to my personal space, where I share my journey, passions, and aspirations.</p>
+            </div>
+            <div class="bio-container">
+                <div class="bio">
+                    <h2>Hello, I'm Dominic Hemken</h2>
+                    <p>
+                        I'm a passionate Lead Systems Engineer based in Derby, Kansas, with a strong dedication to harnessing technology to solve complex problems and drive efficiency. My career in technology began in 2017, rooted in a solid foundation of CompTIA A+ and Security+ certifications. These certifications provided me with essential knowledge and skills in IT support and cybersecurity, paving the way for my growth in the tech industry.
+
+                        While my initial path involved IT support, I quickly discovered my true calling in programming and software development. This passion ignited during my middle and high school years, where I immersed myself in coding courses and hands-on projects. These experiences not only honed my technical abilities but also instilled in me a love for problem-solving and innovation.
+                        
+                        In my current role as a Lead Developer, I am entrusted with leading development efforts and overseeing server management. My responsibilities encompass designing and implementing robust software solutions, optimizing system performance, and ensuring seamless integration across platforms. I thrive on the challenges that come with these responsibilities, as they allow me to leverage my skills to deliver impactful results.
+                        
+                        In addition to my primary role, I run a side business called Dominisoft, which specializes in providing comprehensive IT support services. My services include configuring switches and routers, implementing SIP phone services, and managing fiber optics. This venture not only allows me to apply my technical expertise in real-world scenarios but also provides invaluable experience in client management and business operations.
+                        
+                        My technical toolkit is extensive and continues to grow as I stay abreast of industry trends and advancements. I am proficient in a variety of technologies, including SQL Server, ASP.NET, Node.js, C#, Java, and Kubernetes. This diverse skill set enables me to approach projects from multiple angles, ensuring I can find the best solutions tailored to specific needs.
+                        
+                        In addition to my technical capabilities, I embrace Agile methodologies in my work. As a Scrum Master, I facilitate agile processes within my team, fostering a collaborative environment where creativity and innovation can flourish. I believe that a strong team dynamic is crucial for success, and I work to promote open communication, continuous feedback, and shared accountability among team members.
+                        
+                        My journey in the tech industry is driven by a commitment to lifelong learning and professional development. I constantly seek out opportunities to enhance my skills, whether through formal training, online courses, or community involvement. This dedication not only keeps me at the forefront of technology but also allows me to contribute meaningfully to my team and clients.  </p>
+                </div>
+                <div class="skills">
+                    <h2>Skills & Expertise</h2>
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>SQL Server</li>
+                        <li>ASP.NET, Node.js</li>
+                        <li>C#, C++, VB</li>
+                        <li>HTML/CSS, JavaScript, Java</li>
+                        <li>IIS, Kubernetes, Google Cloud, Azure</li>
+                        <li>Agile Methodologies, Scrum Master</li>
+                    </ul>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Leadership</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image-gallery">
+                <h2>My Life in Pictures</h2>
+                <div class="gallery">
+                    <img class="image" src="./img/SpaceDom.jpg" alt="I Like Space" />
+                    <img class="image" src="./img/DomAndAle.jpg" alt="I Like Space" />
+                    <img class="image" src="./img/AlesFish.jpg" alt="I Like Space" />
+                    <img class="image" src="./img/SuitDom.jpg" alt="I Like Space" />
+                    <img class="image" src="./img/Life.Church.Edmond.jpg" alt="I Like Space" />
+                    
+                    
+                </div>
+            </div>
+            <div class="personal-interests">
+                <h2>Personal Interests</h2>
+                <p>
+                    I enjoy various hobbies, including historical fencing (HEMA), fishing, and serving at my local church on Wednesdays, Thursdays, and Sundays. Fishing holds a special place in my heart, as I spent countless summers at my grandparents’ large community pond, stocked with catfish, trout, and perch.
+                </p>
+                <p>
+                    My wife, Alejandra, and I were married on December 12, 2021. Together, we love to go fishing and serve at church, and we make an annual drive to her family in El Paso. 
+                </p>
+                <p>
+                    Recently, I’ve developed a passion for video game programming, experimenting with creating JavaScript games. My goal is to eventually transition into this field while pursuing a homesteading lifestyle.
+                </p>
+            </div>
+            <div class="achievements">
+                <h2>Achievements and Recognition</h2>
+                <p>
+                    I received the "Above and Beyond" award at WardKraft for my ability to quickly solve a request for bulk printing order item tickets. By creating a button to streamline the printing process, I significantly improved efficiency for the team.
+                </p>
+            </div>
+            <div class="life-philosophy">
+                <h2>Life Philosophy</h2>
+                <p>
+                    In recent months, I’ve drawn closer to God and embraced a philosophy of selfless service and uplifting others. I believe in the power of community and support, and I strive to live this out in my daily interactions.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <div id="image-modal" class="modal">
+        <img class="modal-content" id="modal-image" />
+        <span class="close">&times;</span>
+    </div>
+
+    <script src="./js/about.js"></script>
 </body>
 </html>
