@@ -19,11 +19,15 @@ body {
 /* Contact Form Container */
 .contact-container {
     text-align: center;
-    max-width: 500px;
+    max-width: 70vw;
+    max-height: 90vh;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-container h1 {
@@ -33,40 +37,6 @@ body {
 .contact-container p {
     margin-bottom: 20px;
     font-size: 0.9em;
-}
-
-/* Contact Form Fields */
-.contact-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    transition: 0.3s;
-}
-
-.contact-input:focus {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid #00ffff;
-    box-shadow: 0 0 8px #00ffff;
-}
-
-#submit-btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #00b4d8;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#submit-btn:hover {
-    background: #0096c7;
 }
 
 /* Social Links */
@@ -88,6 +58,13 @@ body {
     color: #fff;
     background: #00ffff;
     box-shadow: 0 0 8px #00ffff;
+}
+
+/* Iframe Styles */
+iframe {
+    flex-grow: 1; /* Allow iframe to expand and take available height */
+    width: 100%; /* Ensure iframe takes full width of container */
+    border-radius: 5px; /* Round the corners of the iframe */
 }
 
 /* Cursor Trail */
